@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Content Radar</title>
+  <meta name="description" content="Content Radar is a personal AI editorial assistant for one author's blog. It never publishes anything on its own.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="./">Content Radar</a>
+      <nav>
+        <a href="./" aria-current="page">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Content Radar</h1>
+    <p class="lead">A personal AI editorial assistant for one author's blog. It finds and sorts news and suggests ideas; the author decides what to write. It never publishes anything.</p>
+
+    <h2>What it does</h2>
+    <ul>
+      <li>Collects new posts from public sources the author follows, such as public Telegram channels, and the articles they link to.</li>
+      <li>Once a day, uses an AI model to prepare a short digest of what the author should know and a few content idea cards. Each card includes a suggested angle, its reasoning, questions for the author and facts to check before publishing.</li>
+      <li>Delivers the digest and the cards to the author through a private Telegram bot, where the author marks which ideas are useful.</li>
+      <li>Leaves every decision to the author. Content Radar does not publish, post or send anything on the author's behalf.</li>
+    </ul>
+
+    <h2>Who it is for</h2>
+    <p>Content Radar is a personal tool. It is built and used by its developer for their own blog and is not offered as a service to other people. There are no public sign-ups or user accounts.</p>
+
+    <h2>Google Drive integration</h2>
+    <p>The Google Drive integration lets the author move a promising idea from the Telegram bot into Google Drive with one button and keep working on it there:</p>
+    <ul>
+      <li>When the author presses the “To editorial” button (“В редакцию”) on an idea card, Content Radar saves that idea's editorial brief as a Markdown file in an editorial folder in the author's own Google Drive and replies with a link to the file.</li>
+      <li>Content Radar asks for one permission only: <code>drive.file</code>. It gives access only to the files and folders that Content Radar itself creates. Content Radar cannot see, open or change any other file in Drive.</li>
+      <li>It does not request the author's name, email address, contacts or any other Google data.</li>
+    </ul>
+    <p>Details are in the <a href="privacy.html">Privacy Policy</a>.</p>
+
+    <div class="note">
+      <p><strong>Status:</strong> the Google Drive integration is in development and is not enabled yet. Content Radar has not been verified by Google.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="https://github.com/dgviktorov/content-radar-site">Source of this site</a></p>
+    </div>
+  </footer>
+</body>
+</html>

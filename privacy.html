@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · Content Radar</title>
+  <meta name="description" content="How Content Radar accesses, uses, stores and shares Google user data through the Google Drive API.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="./">Content Radar</a>
+      <nav>
+        <a href="./">Home</a>
+        <a href="privacy.html" aria-current="page">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: October 21, 2026</p>
+
+    <p>This policy explains how Content Radar accesses, uses, stores and shares Google user data. Content Radar is a personal AI editorial assistant built and used by its developer for their own blog (see the <a href="./">home page</a>). It is not offered as a service to other people.</p>
+
+    <div class="note">
+      <p><strong>Status:</strong> the Google Drive integration described here is in development and is not enabled yet. Content Radar has not been verified by Google. This policy describes how the integration works and will be kept up to date as it changes.</p>
+    </div>
+
+    <h2>1. The permission Content Radar asks for</h2>
+    <p>Content Radar requests exactly one Google permission (OAuth scope):</p>
+    <ul>
+      <li><code>https://www.googleapis.com/auth/drive.file</code>. Google describes it as access to “only the specific Google Drive files you use with this app”. In practice, it covers only the files and folders that Content Radar itself creates.</li>
+    </ul>
+    <p>Content Radar cannot see, open, change or delete any other file in your Google Drive. It does not request your name, email address, profile, contacts or any other Google data.</p>
+
+    <h2>2. What Google user data Content Radar accesses</h2>
+    <ul>
+      <li><strong>Folders it creates.</strong> During a one-time setup, Content Radar creates an editorial folder with an inbox folder inside it in your Google Drive (or only the inbox folder, if you prefer to place it yourself).</li>
+      <li><strong>Files it creates.</strong> Each time you press the “To editorial” button on an idea card in your private Content Radar Telegram bot, Content Radar creates one Markdown file in the inbox folder. The file contains the editorial brief for that idea, prepared by Content Radar from public sources and the author's own editorial notes: the topic, why it may interest readers, a suggested angle and its reasoning, a concept, a possible opening, a format, questions for the author, facts to check before publishing, and links to and short excerpts from the source posts. Verbatim excerpts from the author's private notes are left out of these files.</li>
+      <li><strong>Information about its own files and folders.</strong> Content Radar reads basic information about the files and folders it created: their ID, name, file type, parent folder, whether they are in the trash, their web link, and the private labels Content Radar attached to them (the internal idea and run numbers). It uses this only to find its own folder, confirm that a file was saved correctly and avoid creating duplicates.</li>
+      <li><strong>Access tokens.</strong> When you grant the permission, Google gives Content Radar a refresh token and short-lived access tokens that allow it to make these requests.</li>
+    </ul>
+    <p>Content Radar does not read the contents of files in your Google Drive, and it does not edit, move, share or delete files there.</p>
+
+    <h2>3. How Content Radar uses this data</h2>
+    <p>Google user data is used only to provide the feature you asked for: saving editorial briefs to your Google Drive and giving you a link to each saved file. Specifically:</p>
+    <ul>
+      <li>The file ID and link are recorded in Content Radar's own database, so that it knows which ideas have already been sent and never creates the same file twice.</li>
+      <li>The link to the saved file is shown to you in your private chat with the Content Radar Telegram bot.</li>
+    </ul>
+    <p>Content Radar does not use Google user data for advertising, does not sell it, and does not use it to determine creditworthiness or for lending. Google user data is not sent to AI models. Content Radar does not use data obtained through Google Workspace APIs, including the Google Drive API, to develop, improve or train generalized or non-personalized AI or machine learning models.</p>
+
+    <h2>4. Sharing and transfer</h2>
+    <p>Content Radar does not share, sell, rent or transfer Google user data to anyone, with these narrow exceptions:</p>
+    <ul>
+      <li><strong>Telegram.</strong> The link to a saved file is delivered to you through Telegram, the messaging service on which the Content Radar bot runs, in your private chat with the bot.</li>
+      <li><strong>Legal requirements.</strong> If disclosure is required by applicable law.</li>
+    </ul>
+    <p>Nobody else has access to your Google user data through Content Radar.</p>
+
+    <h2>5. Storage and protection</h2>
+    <ul>
+      <li>The refresh token is stored only on the computer where Content Radar runs, in a separate file with access restricted to Content Radar's own system account. It is never stored in source code repositories, and it is never printed in logs, error messages or chat messages.</li>
+      <li>If an authorization attempt fails, the existing token is left unchanged; a new token replaces the old one only after a successful authorization.</li>
+      <li>All requests to Google are made over encrypted HTTPS connections.</li>
+      <li>The database with file IDs and links is kept on the same computer and is not published anywhere.</li>
+    </ul>
+
+    <h2>6. Retention and deletion</h2>
+    <ul>
+      <li><strong>Files in your Google Drive</strong> belong to you. They stay in your Drive until you delete them, including after you revoke Content Radar's access.</li>
+      <li><strong>The refresh token</strong> is kept until it is replaced or deleted. When you revoke access, Google invalidates it, and it can no longer be used.</li>
+      <li><strong>File IDs and links</strong> are kept in Content Radar's database as part of the history of the idea they belong to, while Content Radar is in use. You can ask for them to be deleted using the contact below.</li>
+    </ul>
+
+    <h2>7. How to revoke access</h2>
+    <p>You can withdraw Content Radar's access to your Google Drive at any time:</p>
+    <ul>
+      <li>Open the <a href="https://myaccount.google.com/linkedapps">linked apps page of your Google Account</a> and choose the “Access to your Google Account” filter.</li>
+      <li>Select Content Radar, then “See details” → “Remove access” → “Confirm”.</li>
+    </ul>
+    <p>Google's instructions: <a href="https://support.google.com/accounts/answer/13533235">manage connections between your Google Account and third-party apps</a>.</p>
+    <p>After that, Content Radar can no longer create files in your Drive or read information about the files it created. Files that were already saved stay in your Drive.</p>
+
+    <h2>8. Google API Services User Data Policy</h2>
+    <p>Content Radar's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>If the way Content Radar uses Google user data changes, this page will be updated before the change takes effect, and the date at the top will change.</p>
+
+    <h2>10. Contact</h2>
+    <p>Questions about this policy can be sent by opening an issue in the <a href="https://github.com/dgviktorov/content-radar-site/issues">public repository of this site</a>. Issues are public, so please do not include personal information in them.</p>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p><a href="./">Home</a> · <a href="terms.html">Terms of Use</a> · <a href="https://github.com/dgviktorov/content-radar-site">Source of this site</a></p>
+    </div>
+  </footer>
+</body>
+</html>
